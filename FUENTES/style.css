@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Rubik_Dirt;
+    src: url(mis_font-family/Rubik_Dirt/RubikDirt-Regular.ttf)
+}
+
+
+
+#cabeza {
+    background-color: rgb(150, 155, 160);
+    font-family: Rubik_Dirt;
+    font-size: 70px;
+    color: green;
+    padding: 3px;
+    text-align: center;
+}
+
+#caja {
+    background-color: rgb(25, 135, 52);
+    font-family: Rubik_Dirt;
+    font-size: 31px;
+    color: rgb(90, 95, 90)
+}

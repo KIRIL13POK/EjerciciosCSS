@@ -1,0 +1,444 @@
+/*fuentes*/
+@font-face {
+    font-family: "nevis";
+    src: url(../fonts/nevis.eot);
+    /*?#iefix arregla si no carca en el internet exploer */
+    src: url(../fonts/nevis.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/nevis.woff) format("woff"),
+        url(../fonts/nevis.ttf) format("truetype"),
+        url(../fonts/nevis.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:FjallaOne-Regular ;
+    src: url(../fonts/FjallaOne-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+/*estilos generales*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../img/paven.png);
+}
+
+/*enlaces*/
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #285616;
+}
+
+a:visited {
+    color: #529125;
+}
+/*para dar le la maxima importancia y tener prioridad:!important y asi nadie la va machacar*/
+.red{
+    color: #9f5481!important;
+
+
+}
+.blue{
+    color: #1377f2!important;
+
+
+}
+.orange{
+    color:#d69d2a!important;
+
+
+}
+
+/*Formularios*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+/*cuando se planta dentro de formulario*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border: 2px solid #70b231;
+    color: black;
+}
+
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+    display: block;
+    border-radius: 2px;
+    border: 1px solid green;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b231;
+    color: white;
+    /*para que cuando pase por encima con el raton se pone en forma de de dedo*/
+    cursor: pointer;
+}
+
+
+/*efecto hover*/
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    box-shadow: 0px 0px 2px gray;
+}
+
+
+/*efecto :active/cuando estoy pulsando el boton*/
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button::active {
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px;
+}
+
+
+
+
+
+#header {
+    min-width: 1024px;
+    /*   */
+    width: 100%;
+    /*ocupa todo*/
+    height: 250px;
+    /*para cenntrar este div*/
+    margin: 0px auto;
+
+    /* simplemente dimos estilo a la caja que contiene      */
+
+}
+
+
+#header a {
+    /*quita raya del enlace*/
+    text-decoration: none
+}
+
+
+#header #logo {
+    width: 770px;
+    /*centra el logo*/
+    margin: 0px auto;
+
+    padding-top: 20px;
+    /* a esta altura la caja del logo ya esta mas o menos puesta*/
+}
+
+
+#header #logo img {
+    /*para que se comporte como un bloque*/
+    display: block;
+
+    text-align: center;
+    margin: 0px auto;
+    /*ancho del logo*/
+    width: 140px;
+
+}
+
+
+#header h1 {
+    text-align: center;
+    font-size: 40px;
+    /*color: #70b231;*/
+    font-family: "nevis";
+    /* cambia el texto en mayuscula */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    /*efecto tridimensinal/(sombra)*/
+    text-shadow: 0px 2px 1px #333333;
+    transition: all 300ms;
+}
+
+/*efecto hover(cuando pasamos por el cursor que haga algo*/
+#header h1:hover {
+    /* al pasar el cursor  cambia de color*/
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231;
+
+}
+
+#header h1 a {
+    color: #70b231
+}
+
+/*En el heramientas de dessarollador con el Inspector se pueden apreciar todos los detalles de header y sus componentes que lleva dentro*/
+
+
+/*Barra de navegacion*/
+#nav {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    /*para  que tenga una pequeña sombra */
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
+}
+
+/*estilos de elementos de la lista*/
+#nav>ul>li {
+    /*para que se centre vertivalmente*/
+    line-height: 40px;
+    /*para que se pongan uno al lado del otro*/
+    float: left;
+    /*para separacion de cada elemento*/
+    border-right: 1px solid gray;
+    /*queda como una pequeña animación*/
+    transition: all 300ms;
+
+}
+
+#nav>ul>li a {
+    /*para poder modificar*/
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+
+}
+
+/*para poner al primer elemeneto de la lista una separacion*/
+#nav>ul>li a:first-child {
+    border-left: 1px solid gray
+}
+
+/*Efecto al menu paraque resalte el elemento del menu.*/
+#nav>ul>li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4 px green inset;
+
+}
+
+/*Menu desplegable*/
+#nav ul li ul {
+    /* para ocultar menu desplegable hasta que hacer over/HTML se va ocultar*/
+    display: none;
+    /* para que tenga una pocision absoluta/para que no desfigure la estructura de sitio web*/
+    position: absolute;
+
+
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    /*para que este encima de los restos de los elementos*/
+    z-index: 1;
+}
+
+#nav ul li:hover ul {
+    /* muestra el menu desplegable*/
+    display: block;
+
+}
+
+#nav ul li:hover ul li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+
+}
+
+#nav ul li:hover ul li a {
+    color: #666666;
+}
+
+#nav ul li:hover ul li:hover {
+    box-shadow: 0px 0px 6px #ccc inset;
+}
+
+/*CONTENIDO*/
+#content {
+    width: 100%;
+    /*altura minima/un escrol minimo*/
+    min-height: 1100px;
+    margin: 0px auto;
+}
+
+/*barra lateral*/
+#aside{
+    /*para que no se coloque al lado clear: both;*/
+    
+    width: 200px;
+    float: left;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#frase{
+    float: left;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: white;
+    border: 1px #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px dashed #333333;
+    box-shadow: 0px 2px 2px #ccc;
+    width: 180px;
+}
+
+#aside .widget {
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+
+}
+
+#aside .widget:last-child {
+    margin-bottom: 20px;
+}
+
+#aside h3 {
+    display: block;
+    color: #333333;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    background: #f2f3f2;
+    border: 1px #ccc;
+    /*para que les quite el bored por los lados */
+    border-right: none;
+    border-left: none;
+}
+
+/* la parte de abajo  de los enlaces*/
+#aside li {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    /*los puntintos cambian*/
+    list-style: square;
+
+}
+
+/*Formulario barra lateral*/
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a {
+    display: block;
+    width: 99%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside label {
+    margin: 0px auto;
+    text-align: center;
+
+}
+
+/*Secciones*/
+#sections{
+    float: right!important;
+    width: 75%;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-right:20px ;
+
+}
+ #sections .titulo{
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    font-family:FjallaOne-Regular ;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+ }
+
+ /*Estilos de las cajas de contenido central*/
+
+ #sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc ;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    /* todo lo que sobre salga de las secciones se oculta*/
+    overflow: hidden;
+ }
+#sections .article{
+    margin: 10px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+/*estilos al span */
+ #sections .date{
+    color: gray;
+    font-size: 14px;
+ }
+
+  /*colocar los stiker en su sitio*/
+  
+  #sections .stickerOne,
+  #sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px;
+    /*para que tenga este nivel*/
+    z-index: 0;
+     
+  }
+  #sections .stickerTwo{
+    margin-left: 860px;
+}
+ 
